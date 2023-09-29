@@ -16,12 +16,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         btn1 = findViewById(R.id.btn1);
+
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Código del intent
+                Intent i = new Intent(MainActivity.this, MainActivity2.class);
+                startActivity(i);
+            }
+        });
     }
 
     @Override
     public void onClick(View view) {
-
-        /** startActivity(new Intent(this, MainActivity2.class)); **/
 
         Intent i = new Intent(this, MainActivity2.class);
         startActivity(i);
