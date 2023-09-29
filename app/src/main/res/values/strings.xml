@@ -1,8 +1,16 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="titulo0">Bienvenido</string>
+
     <string name="titulo">Botones Implicitos</string>
     <string name="boton1">Url</string>
     <string name="boton2">Camara</string>
-    <string name="boton3">Boton 3</string>
-    <string name="boton4">Boton 4</string>
+    <string name="boton3">Contactos</string>
+    <string name="boton4">Compartir</string>
+
+    <string name="titulo2">Botones Explicitos</string>
+    <string name="boton5">Hi</string>
+    <string name="boton6">Alert</string>
+    <string name="boton7">Edit</string>
+    <string name="boton8">Boton</string>
 </resources>

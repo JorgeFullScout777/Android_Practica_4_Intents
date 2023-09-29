@@ -4,64 +4,86 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity2"
+    tools:context=".MainActivity3"
     android:background="@color/white"
     >
 
     <TextView
-        android:id="@+id/titulo"
+        android:id="@+id/text1"
+        android:textSize="30sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/titulo2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        > </TextView>
+    <TextView
+        android:id="@+id/titulo2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="100sp"
-        android:text="@string/titulo"
+        android:text="@string/titulo2"
         android:textSize="40sp"
-        app:layout_constraintBottom_toTopOf="@+id/btn1"
+        app:layout_constraintBottom_toTopOf="@+id/btn5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"> </TextView>
 
     <Button
-        android:id="@+id/btn1"
+        android:id="@+id/btn5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/boton1"
+        android:text="@string/boton5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/titulo"
-        app:layout_constraintBottom_toTopOf="@id/btn2"
+        app:layout_constraintTop_toBottomOf="@id/titulo2"
+        app:layout_constraintBottom_toTopOf="@id/btn6"
         android:layout_marginTop="50dp"
         android:onClick="onClick"
         > </Button>
     <Button
-        android:id="@+id/btn2"
+        android:id="@+id/btn6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/boton2"
+        android:text="@string/boton6"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn1"
-        app:layout_constraintBottom_toTopOf="@id/btn3"
+        app:layout_constraintTop_toBottomOf="@id/btn5"
+        app:layout_constraintBottom_toTopOf="@id/btn7"
         > </Button>
     <Button
-        android:id="@+id/btn3"
+        android:id="@+id/btn7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/boton3"
+        android:text="@string/boton7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn2"
-        app:layout_constraintBottom_toBottomOf="@id/btn4"
+        app:layout_constraintTop_toBottomOf="@id/btn6"
+        app:layout_constraintBottom_toBottomOf="@id/btn8"
         > </Button>
     <Button
-        android:id="@+id/btn4"
+        android:id="@+id/btn8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/boton4"
+        android:text="@string/boton8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn3"
+        app:layout_constraintTop_toBottomOf="@id/btn7"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginBottom="50sp"
         > </Button>
+
+    <EditText
+        android:id="@+id/edittext"
+        android:visibility="invisible"
+        android:hint="wenas noches"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btn5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titulo2"
+        > </EditText>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

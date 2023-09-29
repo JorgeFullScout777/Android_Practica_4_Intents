@@ -43,9 +43,25 @@ public class MainActivity2 extends AppCompatActivity implements View.OnClickList
 
             @Override
             public void onClick(View v) {
-
+                startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse("content://contacts/people/")));
             }
         });
+        btn4.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "Este es un mensaje para compartir.");
+                sendIntent.setType("text/plain");
+
+                if (sendIntent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(sendIntent);}
+            }
+        });
+
+
+
     }
 
     @Override

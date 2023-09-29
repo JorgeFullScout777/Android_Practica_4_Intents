@@ -4,34 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@color/white"
+    android:id="@+id/padre"
+    >
 
 
     <TextView
         android:id="@+id/texto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bienvenido"
+        android:text="@string/titulo0"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/btn1"
-        android:layout_marginTop="0sp"
+        android:layout_marginTop="130sp"
         > </TextView>
 
     <Button
         android:id="@+id/btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/texto"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="0sp"
-        android:text="Hazme Click!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Botones Implicitos"
+        app:layout_constraintBottom_toTopOf="@id/btn2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/texto"
+        android:layout_marginTop="180sp"
+        android:height="40sp"
+        android:width="220sp"
+        > </Button>
+    <Button
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Botones Explicitos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn1"
+        android:layout_marginTop="30sp"
         android:height="40sp"
         android:width="220sp"
         > </Button>
