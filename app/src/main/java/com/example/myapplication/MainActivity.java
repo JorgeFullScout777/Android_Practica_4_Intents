@@ -5,13 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     Button btn1, btn2;
-    TextView texto;
+    TextView texto, count;
     String mensaje;
 
 
@@ -23,13 +24,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn1 = findViewById(R.id.btn1);
         btn2 = findViewById(R.id.btn2);
         texto = findViewById(R.id.texto);
+        count = findViewById(R.id.count);
 
 
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(MainActivity.this, MainActivity2.class);
-                startActivity(i);
+
+                new CountDownTimer(10000, 1000) {
+
+                    public void onTick(long millisUntilFinished) {
+                        count.setText("" + millisUntilFinished / 1000);
+                    }
+
+                    public void onFinish() {
+                        count.setText("Hecho!");
+                        Intent i = new Intent(MainActivity.this, MainActivity2.class);
+                        startActivity(i);
+                    }
+                }.start();
             }
 
 
